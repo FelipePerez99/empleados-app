@@ -9,7 +9,7 @@ use App\Models\Empleado;
 class EmpleadoRepositorio {
     public function __construct(private Database $db) {}
 
-    public function todos(): array {
+    public function listarEmpleados(): array {
         $sql = "SELECT e.*, a.nombre AS area 
                 FROM empleados e 
                 JOIN areas a ON a.id = e.area_id
@@ -17,8 +17,7 @@ class EmpleadoRepositorio {
         return $this->db->pdo()->query($sql)->fetchAll();
     }
 
-
-    public function buscar(int $id): ?Empleado {
+    public function obtenerEmpleadoPorId(int $id): ?Empleado {
         $pdo = $this->db->pdo();
         $stmt = $pdo->prepare("SELECT * FROM empleados WHERE id = ?");
         $stmt->execute([$id]);
