@@ -32,17 +32,17 @@ Es necesario habilitar la extensión **pdo_mysql** para que la conexión a MySQL
 
 ## 📂 Estructura del proyecto
 
-public/                # Front controller (index.php)
-src/
-  Config/Database.php  # Conexión PDO a MySQL
-  Controllers/         # EmpleadoControlador.php
-  Repositories/        # EmpleadoRepositorio, AreaRepositorio, RolRepositorio
-  Services/            # EmpleadoServicio (validaciones del dominio)
-views/
-  empleado/            # lista.php, formulario.php (Bootstrap)
-sql/
-  schema.sql           # Esquema de base de datos
-  seed.sql             # Datos iniciales de prueba
+- public/                # Front controller (index.php)
+- src/
+  - Config/Database.php  # Conexión PDO a MySQL
+  - Controllers/         # EmpleadoControlador.php
+  - Repositories/        # EmpleadoRepositorio, AreaRepositorio, - - RolRepositorio
+  - Services/            # EmpleadoServicio (validaciones del dominio)
+- views/
+  - empleado/            # lista.php, formulario.php (Bootstrap)
+- sql/
+  - schema.sql           # Esquema de base de datos
+  - seed.sql             # Datos iniciales de prueba
 
 ---
 
@@ -53,11 +53,11 @@ sql/
 2. Edita src/Config/Database.php con tus credenciales locales de MySQL (por defecto en XAMPP suele ser usuario root sin contraseña):
 
 // src/Config/Database.php (ejemplo para XAMPP)
-$host = '127.0.0.1';
-$db   = 'empleados_db';
-$user = 'root';
-$pass = '';
-$charset = 'utf8mb4';
+- $host = '127.0.0.1';
+- $db   = 'empleados_db';
+- $user = 'root';
+- $pass = '';
+- $charset = 'utf8mb4';
 
 3. Crea la base de datos e importa el esquema y los datos:
 
