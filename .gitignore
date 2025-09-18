@@ -1,0 +1,14 @@
+# Sistema / editor
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Composer (si luego lo usas)
+vendor/
+
+# Logs / temporales
+*.log
+*.tmp
+
+# Entornos locales
+.env
